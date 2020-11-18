@@ -7,25 +7,29 @@
   <body class="page-body">
 
     <header class="page-header">
-      <a href="" class="logo page-header__logo">
-        <img src="https://via.placeholder.com" alt="логотип сайта Мишка" width="86" height="35"><!--Временно оставлю img, так как лого вставлю с помощью svg-->
+      <a href="#" class="logo page-header__logo">
+        <img src="https://via.placeholder.com" alt="логотип сайта Мишка" width="86" height="35">
       </a>
-      <nav class="main-nav">
+      <button class="nav-toggle page-header__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav page-header__main-nav">
         <div class="main-nav__wrapper">
-          <button class="main-nav-toggle"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="main-nav__list  site-list">
-            <li class="site-list__item main-nav__list__item--big-link"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="site-list__item main-nav__list__item--big-link"><a href="form.html">Вязание на заказ</a></li>
-            <li class="site-list__item"><a href="">Новые поступления</a></li>
-            <li class="site-list__item"><a href="">Распродажа</a></li>
+          <ul class="site-list main-nav__site-list">
+            <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
           </ul>
-          <ul class="main-nav__list  user-list">
-            <li class="user-list__search"><a href=""><span class="visually-hidden">Поиск</span></a></li>
-            <li class="user-list__cart main-nav__list__item--big-link"><a href="">Корзина: пока пуста</a></li>
+          <ul class="user-list main-nav__user-list">
+            <li class="user-list__item user-list__item--search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
+            <li class="user-list__item user-list__item--cart"><a href="#">Корзина: пока пуста</a></li>
           </ul>
         </div>
       </nav>
-      <div class="page-header__text">Бесплатная доставка по России</div>
+      <nav class="additional-nav page-header__additional-nav">
+          <ul class="additional-nav__list">
+            <li class="additional-nav__item"><a href="#">Новые поступления</a></li>
+            <li class="additional-nav__item"><a href="#">Распродажа</a></li>
+          </ul>
+      </nav>
+      <p class="page-header__text">Бесплатная доставка по России</p>
     </header>
 
     <main class="form-page-main">
@@ -71,14 +75,14 @@
 
     <footer class="page-footer">
 
-      <a href="" class="logo page-footer__logo">
+      <a href="#" class="logo page-footer__logo">
         <img src="https://via.placeholder.com" alt="логотип сайта Мишка" width="86" height="35">
       </a>
 
-      <ul class="page-footer__social">
-        <li class="social__item"><a href="">Instagramm</a></li>
-        <li class="social__item"><a href="">Facebook</a></li>
-        <li class="social__item"><a href="">Twitter</a></li>
+      <ul class="social page-footer__social">
+        <li class="social__item social__item--Instagram"><a href="#">Instagram</a></li>
+        <li class="social__item social__item--Facebook"><a href="#">Facebook</a></li>
+        <li class="social__item social__item--Twitter"><a href="#">Twitter</a></li>
       </ul>
 
       <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copiright">
