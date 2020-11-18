@@ -3,7 +3,6 @@
 * Студент: [Данил Ухов](https://up.htmlacademy.ru/adaptive/21/user/1036301).
 * Наставник: [Елена Валеева](https://htmlacademy.ru/profile/nikkie8)
 
-
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
