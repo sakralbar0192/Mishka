@@ -9,8 +9,8 @@
     <a href="#" class="logo page-header__logo">
       <img src="https://via.placeholder.com" alt="логотип сайта Мишка" width="86" height="35">
     </a>
-    <button class="nav-toggle page-header__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <nav class="main-nav page-header__main-nav">
+      <button class="nav-toggle main-nav__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="site-list main-nav__site-list">
           <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -20,13 +20,11 @@
           <li class="user-list__item user-list__item--search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
           <li class="user-list__item user-list__item--cart"><a href="#">Корзина: пока пуста</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav class="additional-nav page-header__additional-nav">
-      <ul class="additional-nav__list">
-        <li class="additional-nav__item"><a href="#">Новые поступления</a></li>
-        <li class="additional-nav__item"><a href="#">Распродажа</a></li>
+        <ul class="additional-list main-nav__additional-list">
+        <li class="additional-list__item"><a href="#">Новые поступления</a></li>
+        <li class="additional-list__item"><a href="#">Распродажа</a></li>
       </ul>
+      </div>
     </nav>
     <p class="page-header__text">Бесплатная доставка по России</p>
   </header>
@@ -55,7 +53,7 @@
           <dd class="add-info__value">15 см</dd>
         </dl>
         <p class="main-suggestion__price">Цена: 990 руб.</p>
-        <a href="#" class="button main-suggestion__button">ЗАКАЗАТЬ</a>
+        <a href="#" class="button main-suggestion__button">Заказать</a>
         <img src="https://via.placeholder.com" alt="Вязаные корзинки" class="main-suggestion__img" width="525" height="635">
       </div>
     </section>
@@ -73,21 +71,31 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="reviews__wrapper">
+      <div class="reviews__wrapper slider">
         <h2 class="rewiews__title">Отзывы</h2>
-        <a href="review.html" class="button reviews__button">Написать</a>
-        <div class="post reviews__post">
-          <p class="post__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-          <p class="reviews__author">Анастасия Красильникова<span class="post__nickname">@misssssiskras</span></p>
-        </div>
-        <div class="controls reviews__controls">
+        <ul class="slider__list">
+          <li class="slider__item slider__item--current">
+            <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+            <cite class="reviews__author">Анастасия Красильникова<br/><span class="reviews__nickname">@misssssiskras</span></cite>
+          </li>
+          <li class="slider__item">
+            <blockquote class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+            <cite class="reviews__author">Екатерина Красильникова<br/><span class="reviews__nickname">@misssssiskras2</span></cite>
+          </li>
+          <li class="slider__item">
+            <blockquote class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+            <cite class="reviews__author">Елена Красильникова<br/><span class="reviews__nickname">@misssssiskras3</span></cite>
+          </li>
+        </ul>
+        <div class="controls slider__controls">
           <button class="controls__button controls__button--back" type="button">назад</button>
           <button class="controls__button controls__button--forward" type="button">вперед</button>
         </div>
+        <a href="review.html" class="button reviews__button">Написать</a>
       </div>
     </section>
     <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
+      <h2 class="contacts__title">Контакты</h2>
       <div class="contacts__wrapper">
         <dl class="contacts__information">
           <dt class="contacts__desc">e-mail:</dt>
