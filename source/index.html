@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -13,7 +14,10 @@
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+          <svg class="visually-hidden" width="20" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M20 0H0v2h20V0zM20 6H0v2h20V6zM20 12H0v2h20v-2z" fill="#231F20"/></svg>
+          <svg width="21" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 1.366L19.566 0 10.55 8.585 1.434 0 0 1.366l9.015 8.683L0 18.634 1.434 20l9.117-8.585L19.566 20 21 18.634l-9.015-8.585L21 1.366z" fill="#000"/></svg>
+        </button>
         <ul class="site-list main-nav__list">
           <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
           <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
@@ -31,8 +35,8 @@
     <p class="page-header__text">Бесплатная доставка по России</p>
   </header>
   <main class="page-main">
-    <h1 class="page-main__main-title">Милые штуки ручной<br/>работы для дома</h1>
     <section class="product-type">
+      <h1 class="page-main__title page-main__title--index">Милые штуки ручной<br/>работы для дома</h1>
       <h2 class="visually-hidden">Типы товаров</h2>
       <div class="product-type__wrapper">
         <ul class="product-type__list">
