@@ -3,24 +3,26 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <header class="page-header">
-    <a href="#" class="logo page-header__logo">
-      <img src="https://via.placeholder.com" alt="логотип сайта Мишка" width="86" height="35">
+    <a href="index.html" class="logo page-header__logo">
+      <img src="img/mishka-logo-mobile.svg" alt="логотип интернет магазина 'Мишка'" width="85" height="35">
     </a>
-    <nav class="main-nav page-header__main-nav">
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <button class="nav-toggle main-nav__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="site-list main-nav__site-list">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="site-list main-nav__list">
           <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
           <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
         </ul>
-        <ul class="user-list main-nav__user-list">
-          <li class="user-list__item user-list__item--search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
+        <ul class="user-list main-nav__list">
+          <li class="user-list__item user-list__item--search"><a href="#"><span class="user-list__search-text">Поиск по сайту</span></a></li>
           <li class="user-list__item user-list__item--cart"><a href="#">Корзина: пока пуста</a></li>
         </ul>
-        <ul class="additional-list main-nav__additional-list">
+        <ul class="additional-list main-nav__list">
           <li class="additional-list__item"><a href="#">Новые поступления</a></li>
           <li class="additional-list__item"><a href="#">Распродажа</a></li>
         </ul>
@@ -28,38 +30,40 @@
     </nav>
     <p class="page-header__text">Бесплатная доставка по России</p>
   </header>
-  <main class="catalog-page-main">
-    <h1 class="catalog-main-title catalog-page-main__catalog-main-title">Каталог товаров</h1>
+  <main class="page-main">
     <section class="products">
-      <ul class="products__list">
-        <li class="product products__product">
-          <a href="#" class="product__img"><img src="https://via.placeholder.com" alt="Зайчик-попрыгайчик" width="315" height="460"></a>
-          <a href="#" class="product__title">Зайчик-попрыгайчик</a>
-          <p class="product__description">Рост 30 см, вес 200 г</p>
-          <p class="product__price">1 200 руб.</p>
-          <button class="product__button"><span class="visually-hidden">В корзину</span></button>
-        </li>
-        <li class="product products__product">
-          <a href="#" class="product__img"><img src="https://via.placeholder.com" alt="Корзинка для белья" width="315" height="460"></a>
-          <a href="#" class="product__title">Корзинка для белья</a>
-          <p class="product__description">Диаметр 15 см, высота 10 см</p>
-          <p class="product__price">690 руб.</p>
-          <button class="product__button"><span class="visually-hidden">В корзину</span></button>
-        </li>
-        <li class="product products__product">
-          <a href="#" class="product__img"><img src="https://via.placeholder.com" alt="Большая корзинка для игрушек" width="315" height="460"></a>
-          <a href="#" class="product__title">Большая корзинка для игрушек</a>
-          <p class="product__description">Диаметр 30 см, высота 30 см</p>
-          <p class="product__price">1 500 руб.</p>
-          <button class="product__button"><span class="visually-hidden">В корзину</span></button>
-        </li>
-      </ul>
+      <h1 class="page-main__title">Каталог товаров</h1>
+      <div class="container">
+        <ul class="products__list">
+          <li class="products__product">
+            <a href="#" class="products__img"><img src="img/photo-1-mobile.jpg" alt="Зайчик-попрыгайчик" width="260" height="195"></a>
+            <a href="#" class="products__title">Зайчик-попрыгайчик</a>
+            <p class="products__description">Рост 30 см, вес 200 г</p>
+            <p class="products__price">1 200 руб.</p>
+            <button class="products__button"><span class="visually-hidden">В корзину</span></button>
+          </li>
+          <li class="products__product">
+            <a href="#" class="products__img"><img src="img/photo-2-mobile.jpg" alt="Корзинка для белья" width="260" height="195"></a>
+            <a href="#" class="products__title">Корзинка для белья</a>
+            <p class="products__description">Диаметр 15 см, высота 10 см</p>
+            <p class="products__price">690 руб.</p>
+            <button class="products__button"><span class="visually-hidden">В корзину</span></button>
+          </li>
+          <li class="products__product">
+            <a href="#" class="products__img"><img src="img/photo-3-mobile.jpg" alt="Большая корзинка для игрушек" width="260" height="195"></a>
+            <a href="#" class="products__title">Большая корзинка для игрушек</a>
+            <p class="products__description">Диаметр 30 см, высота 30 см</p>
+           <p class="products__price">1 500 руб.</p>
+            <button class="products__button"><span class="visually-hidden">В корзину</span></button>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section class="production-process">
+    <section class="production-process container">
       <h2 class="production-process__title">Процесс производства</h2>
+      <img src="img/video-mobile.jpg" alt="Процесс производства" class="production-process__image" width="260" height="150">
       <p class="production-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       <a href="form.html" class="button production-process__button">Сделать заказ</a>
-      <img src="https://via.placeholder.com" alt="Процесс производства" class="production-process__image" width="680" height="455">
     </section>
   </main>
   <footer class="page-footer">
