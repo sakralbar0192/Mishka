@@ -10,27 +10,36 @@
 }
 
 .contacts__information {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 30px;
   margin: 0;
   margin-bottom: 60px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
 
-  dt {
-    width: 75px;
-  }
-
   dd {
-    width: 180px;
+    margin-left: 33px;
   }
 }
 
 .contacts__map {
+  position: relative;
   margin-bottom: 40px;
+  height: 450px;
+  background-image: url("../../img/map-pin.svg"), url("../../img/map-tablet.png");
+  background-repeat: no-repeat;
+  background-position: 55% 145px, center;
+  overflow: visible;
 }
 
 .contacts__value {
   &--underlined {
     border-bottom: 1px solid @tiffany;
   }
+}
+
+.contacts__button {
+  margin: 0 30px;
 }

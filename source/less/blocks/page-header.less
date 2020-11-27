@@ -1,10 +1,21 @@
 .page-header {
   padding-top: 22px;
+
+  @media (min-width: 768px) {
+    position: relative;
+  }
 }
 
 .page-header__logo {
   width: 85px;
   margin: 0 auto 15px auto;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    margin: 0;
+  }
 }
 
 .page-header__text {
@@ -13,4 +24,8 @@
   padding: 20px 50px;
   font-size: 15px;
   font-weight: 400;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
 }
