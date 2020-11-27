@@ -1,19 +1,75 @@
 .about-us__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-size: 25px;
   line-height: 30px;
 }
 
 .about-us__list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .about-us__item {
+  position: relative;
   padding-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   font-size: 17px;
   line-height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -3px;
+    width: 55px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--flower {
+    order: ;
+    &::before{
+      background-image: url("../../img/icon-1.svg");
+    }
+  }
+
+  &--ball {
+    order: 4;
+    &::before{
+      background-image: url("../../img/icon-2.svg");
+    }
+  }
+
+  &--money {
+    order: 2;
+    &::before{
+      background-image: url("../../img/icon-3.svg");
+    }
+  }
+
+  &--rocket {
+    order: 5;
+    &::before{
+      background-image: url("../../img/icon-4.svg");
+    }
+  }
+
+  &--heart {
+    order: 3;
+    &::before{
+      background-image: url("../../img/icon-5.svg");
+    }
+  }
+
+  &--gift {
+    order: 6;
+    &::before{
+      background-image: url("../../img/icon-6.svg");
+    }
+  }
 }

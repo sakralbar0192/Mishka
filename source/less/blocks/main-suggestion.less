@@ -1,9 +1,15 @@
 .main-suggestion {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 35px;
+  background-image: url("../../img/zigzag-line-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .main-suggestion__title {
   margin: 0;
+  margin-bottom: 17px;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
@@ -11,9 +17,10 @@
 
 .main-suggestion__name {
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 5px;
   font-size: 25px;
   line-height: 30px;
+  order: -1;
 }
 
 .main-suggestion__text {
@@ -26,7 +33,7 @@
 
 .main-suggestion__add-info {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
@@ -35,19 +42,21 @@
     float: left;
     clear: both;
     width: 100px;
-    padding-bottom: 12px;
+    margin-top: 3px;
+    padding-bottom: 15px;
     border-bottom: 1px solid @white-3;
   }
 
   dd {
     width: 200px;
+    margin-top: 3px;
     padding-bottom: 12px;
     border-bottom: 1px solid @white-3;
   }
 }
 
 .main-suggestion__img {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .main-suggestion__price {
@@ -55,4 +64,5 @@
   margin-bottom: 25px;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
 }
