@@ -1,0 +1,43 @@
+.product-type__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-type__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 24px 100px 31px 30px;
+  font-size: 19px;
+  line-height: 24px;
+  color: @white;
+
+  &::before {
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--toys {
+    background-color: @tiffany-3;
+
+    &::before {
+      content: "";
+      background-image: url("../../img/toy.svg");
+    }
+  }
+
+  &--interior {
+    background-color: @tiffany-2;
+
+    &::before {
+      content: "";
+      background-image: url("../../img/interior.svg");
+    }
+  }
+}
