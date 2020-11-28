@@ -1,15 +1,22 @@
 .main-nav {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
 
   li {
     box-sizing: border-box;
-    min-height: 80px;
-    padding: 27px 10px 27px 45px;
+    padding: 27px 10px 27px 30px;
     border: 1px solid @white-3;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
 .main-nav__list {
+  flex-grow: 1;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -26,14 +33,21 @@
     }
   }
 
-  @media (min-width: 768px) {
+   @media (min-width: 768px) {
     display: flex;
   }
 }
 
+
 .main-nav__toggle {
   position: absolute;
   top: -50px;
-  right: -5px;
+  right: 7%;
   border: 0;
+}
+
+.main-nav__button-svg {
+  &--open {
+    display: none;
+  }
 }
