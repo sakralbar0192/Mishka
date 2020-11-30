@@ -1,37 +1,45 @@
 .user-list {
- @media (min-width: 768px) {
-    flex-grow: 1;
-    display: flex;
-    padding-left: 48%;
+  @media (min-width: 768px) and (max-width: 1149px) {
+    justify-content: flex-end;
+    padding-right: 19px;
     border-bottom: 1px solid @black-3;
   }
 
-  .user-list__item {
+  @media (min-width: 1150px) {
+    justify-content: flex-end;
+    max-width: 42%;
+    padding-left: 90px;
+    padding-right: 20px;
+    border-bottom: 1px solid @black-3;
+  }
+}
 
-    @media (min-width: 768px) {
-      padding: 31px;
-      border-left: 1px solid @black-3;
-    }
+.user-list__item {
+  padding: 29px 30px 25px 30px;
+  border-bottom: 1px solid @white-2;
 
-    &--search {
+  @media (min-width: 768px) and (max-width: 1149px) {
+    padding: 33px 31px 26px 31px;
+    border-left: 1px solid @black-3;
+  }
 
-    }
+  @media (min-width: 1150px) {
+    padding: 33px;
+    border-left: 1px solid @black-3;
+  }
 
-    &--cart {
-      @media (min-width: 768px) {
-        flex-grow: 1;
-        padding-right: 50px;
-      }
+  &--search {
+    @media (min-width: 768px) and (max-width: 1149px) {
+      padding: 37px 31px 26px 33px;
     }
   }
 }
 
 .user-list__svg {
-
   &--cart {
     margin-right: 20px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1149px) {
       margin-right: 27px;
     }
   }
@@ -40,7 +48,7 @@
 .user-list__search-text {
   margin-left: 22px;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     display: none;
   }
 }

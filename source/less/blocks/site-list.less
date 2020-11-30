@@ -1,17 +1,31 @@
 .site-list {
-  @media (min-width: 768px) {
-    padding: 0 5%;
-    background-color: @white-2;
+  @media (min-width: 768px) and (max-width: 1149px) {
+    padding-left: 30px;
+    background-color: @white-6;
   }
 
-  .site-list__item {
-    padding-left: 75px;
+  @media (min-width: 1150px) {
+    max-width: 42%;
+    padding-right: 90px;
+    padding-left: 20px;
+    border-bottom: 1px solid @black-3;
+  }
+}
 
-    @media (min-width: 768px) {
-      margin-right: 15px;
-      padding: 20px 10px;
-      font-size: 15px;
-      line-height: 24px;
-    }
+
+.site-list__item {
+  padding: 29px 30px 25px 76px;
+  border-bottom: 1px solid @white-2;
+
+  @media (min-width: 768px) and (max-width: 1149px) {
+    padding: 20px 15px 20px 20px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (min-width: 1150px) {
+    padding: 33px;
+    border: 0;
+    border-right: 1px solid @black-3;
   }
 }
