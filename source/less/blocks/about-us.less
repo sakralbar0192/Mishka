@@ -1,24 +1,74 @@
+.about-us {
+  @media (min-width: 768px) and (max-width: 1149px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
 .about-us__title {
   margin: 0;
   margin-bottom: 35px;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: 768px) and (max-width: 1149px) {
+    margin-bottom: 15px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    margin-bottom: 10px;
+    padding-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about-us__list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  list-style: none;
+
+  @media (min-width: 768px) and (max-width: 1149px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1150px) {
+    justify-content: flex-start;
+    padding-left: 175px;
+  }
 }
 
 .about-us__item {
   position: relative;
+  min-width: 260px;
   padding-top: 50px;
   margin-bottom: 33px;
   font-size: 17px;
   line-height: 20px;
+
+  @media (min-width: 768px) and (max-width: 1149px) {
+    flex-grow: 1;
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 26px;
+    padding-top: 84px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: 1150px) {
+    box-sizing: border-box;
+    min-width: 350px;
+    margin-bottom: 28px;
+    padding-top: 83px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 
   &::before {
     content: "";
@@ -29,6 +79,10 @@
     height: 38px;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: 768px) {
+      top: 26px;
+    }
   }
 
   &--flower {
@@ -41,11 +95,19 @@
     &::before {
       background-image: url("../../img/icon-2.svg");
     }
+
+    @media (min-width: 768px) {
+      order: 2;
+    }
   }
 
   &--money {
     &::before {
       background-image: url("../../img/icon-3.svg");
+    }
+
+    @media (min-width: 768px) {
+      order: 3;
     }
   }
 
@@ -53,17 +115,29 @@
     &::before {
       background-image: url("../../img/icon-4.svg");
     }
+
+    @media (min-width: 768px) {
+      order: 4;
+    }
   }
 
   &--heart {
     &::before {
       background-image: url("../../img/icon-5.svg");
     }
+
+    @media (min-width: 768px) {
+      order: 5;
+    }
   }
 
   &--gift {
     &::before {
       background-image: url("../../img/icon-6.svg");
+    }
+
+    @media (min-width: 768px) {
+      order: 6;
     }
   }
 }
