@@ -18,8 +18,14 @@
   padding: 0;
   list-style: none;
 
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-only) {
     justify-content: space-between;
+  }
+
+  li {
+    @media (max-width: @mobile-only) {
+      flex-grow: 1;
+    }
   }
 
 

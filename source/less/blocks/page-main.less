@@ -13,9 +13,8 @@
 }
 
 .page-main__title {
-  box-sizing: border-box;
   margin: 0;
-  padding: 70px 30px;
+  padding: 70px 0;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
@@ -53,7 +52,18 @@
   }
 
   &--form {
-    padding-bottom: 90px;
+    padding-bottom: 75px;
+    background-color: @white-6;
+
+    @media (min-width: 768px) {
+      padding-top: 36px;
+      padding-bottom: 85px;
+      background-color: @white-6;
+      background-image: url("../../img/zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% 24px;
+    }
   }
 
   &--catalog {
