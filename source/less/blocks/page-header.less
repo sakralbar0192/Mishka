@@ -1,37 +1,31 @@
 .page-header {
-  @media (min-width: 768px) {
     position: relative;
-  }
 }
 
 .page-header__logo {
-  display: block;
-  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 150px;
   height: 80px;
   margin: 0 auto;
-  border-bottom: 1px solid @white-2;
   background-image: url("../../img/mishka-logo-mobile.svg");
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    position: absolute;
+  @media (min-width: @tablet-width) {
     top: 5px;
     left: 30px;
-    width: 150px;
-    border: 0;
+    margin: 0;
     background-image: url("../../img/mishka-logo-tablet.svg");
   }
 
-  @media (min-width: 1150px) {
-    position: absolute;
-    top: 5px;
+  @media (min-width: @desktop-width) {
     left: 0;
     right: 0;
-    width: 150px;
     margin: 0 auto;
-    border: 0;
     background-image: url("../../img/mishka-logo-desktop.svg");
   }
 
@@ -50,7 +44,7 @@
   font-size: 15px;
   font-weight: 400;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 70%;
     right: 50px;

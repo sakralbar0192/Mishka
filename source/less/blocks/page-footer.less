@@ -1,48 +1,93 @@
 .page-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
+  justify-content: center;
+  padding: 0 30px;
   background-color: @white-2;
 
-  @media (min-width: 768px) {
-    justify-content: space-between;
-    padding-top: 25px;
-    padding-bottom: 25px;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    padding: 0 50px;
+    padding-top: 48px;
+    padding-bottom: 55px;
   }
 }
 
 .page-footer__logo {
-  @media (max-width: 767px) {
+  @media (max-width: @mobile-only) {
     display: none;
   }
 }
 
-.page-footer__social-wrapper {
-  width: 100%;
-  border-bottom: 1px solid @white-5;
+.page-footer__svg{
+  &:hover {
+    fill: @tiffany-5;
+  }
 
-  @media (min-width: 768px) {
-    width: 150px;
+  &:active {
+    opacity: 0.3;
   }
 }
 
-.page-footer__social {
-  width: 150px;
-  margin: 0 auto;
-  padding: 25px 0;
+.page-footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0 34px;
+  list-style: none;
+
+  @media (min-width: @tablet-width){
+    padding: 0 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 295px;
+  }
+}
+
+.page-footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .page-footer__copyright {
   display: flex;
   align-items: center;
-  padding: 24px 0;
+  padding: 23px 35px;
   font-size: 19px;
   line-height: 18px;
   color: @black;
+  border-top: 1px solid @white-5;
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+    padding: 0;
+    border: 0;
+  }
+
+  .page-footer__svg {
+    margin-left: 25px;
+    fill: @tiffany-2;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 27px;
+    }
+  }
 }
 
-.page-footer__html-logo {
+.page-footer__copyright-logo {
   margin-left: 25px;
   fill: @tiffany-2;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 27px;
+  }
 }

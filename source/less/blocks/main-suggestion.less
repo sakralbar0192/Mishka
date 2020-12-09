@@ -1,32 +1,38 @@
 .main-suggestion {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  padding: 0 30px;
+  padding-bottom: 43px;
   background-image: url("../../img/zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% 6px;
 
-  @media (min-width: 768px) and (max-width: 1149px) {
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 0 50px;
+    padding-bottom: 68px;
     background-size: 100% 17px;
   }
 
-  @media (min-width: 1150px) {
-    padding-top: 45px;
+  @media (min-width: @desktop-width) {
+    padding-bottom: 97px;
     background-size: auto 23px;
   }
 }
 
 .main-suggestion__title {
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   color: @tiffany-2;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 7px;
     right: 63px;
@@ -36,8 +42,8 @@
     text-align: center;
   }
 
-  @media (min-width: 1150px) {
-    top: 55px;
+  @media (min-width: @desktop-width) {
+    top: 72px;
     right: 0;
     left: 82px;
   }
@@ -45,18 +51,22 @@
 
 .main-suggestion__name {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-size: 25px;
   line-height: 30px;
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    margin-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 39px;
     font-size: 43px;
     line-height: 50px;
   }
 
-  @media (min-width: 1150px) {
-    margin-bottom: 37px;
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    margin-top: 64px;
+    margin-bottom: 12px;
     padding-left: 175px;
     font-size: 53px;
     line-height: 57px;
@@ -65,21 +75,18 @@
 
 .main-suggestion__text {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    width: 43%;
-    margin-bottom: 45px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
     font-size: 17px;
     line-height: 30px;
   }
 
-  @media (min-width: 1150px) {
-    width: 27%;
-    margin-bottom: 58px;
+  @media (min-width: @desktop-width) {
     padding-left: 175px;
     font-size: 17px;
     line-height: 30px;
@@ -90,79 +97,76 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: auto 1fr;
-  grid-row-gap: 8px;
-  max-width: 460px;
+  grid-row-gap: 7px;
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    max-width: 45%;
-    margin-bottom: 57px;
+  @media (min-width: @tablet-width) {
+    margin-right: 40px;
+    margin-bottom: 50px;
   }
 
-  @media (min-width: 1150px) {
-    max-width: 30%;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
     padding-left: 175px;
-    margin-bottom: 110px;
   }
 
-  dt {
-    padding-bottom: 12px;
+  .main-suggestion__description {
     border-bottom: 1px solid @white-3;
   }
 
-  dd {
+  .main-suggestion__value {
     margin: 0;
     padding-left: 30px;
-    padding-bottom: 12px;
+    padding-bottom: 11px;
     border-bottom: 1px solid @white-3;
   }
 }
 
 .main-suggestion__img {
-  margin: 0 auto;
   margin-bottom: 26px;
 
-  @media (min-width: 768px) and (max-width: 1149px) {
-    position: absolute;
-    top: 100px;
-    right: 50px;
+  @media (min-width: @tablet-width) {
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 2;
     width: 335px;
     height: 405px;
-    z-index: -1;
+    margin-top: 12px;
+    margin-bottom: 0;
   }
 
-  @media (min-width: 1150px) {
-    position: absolute;
-    top: -16px;
-    right: 50px;
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
     width: 525px;
-    height: 635px;
+    height: 640px;
+    margin-top: 0;
     z-index: -1;
   }
 }
 
 .main-suggestion__price {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
 
-  @media (min-width: 768px) {
-    padding: 0 70px;
-    margin-bottom: 30px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+    padding-left: 72px;
     font-size: 20px;
     line-height: 24px;
     text-align: left;
   }
 
-  @media (min-width: 1150px) {
-    margin-left: 249px;
-    padding: 0;
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    margin-bottom: 0px;
+    padding-left: 248px;
   }
 }
 
@@ -170,16 +174,16 @@
   width: 260px;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
+    align-self: end;
+    justify-self: start;
     width: 292px;
     margin: 0;
-    margin-bottom: 33px;
     font-size: 17px;
     line-height: 20px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: @desktop-width) {
     margin-left: 175px;
-    margin-bottom: 60px;
   }
 }
