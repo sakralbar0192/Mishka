@@ -1,17 +1,14 @@
 .order-form {
-  margin-bottom: 15px;
+
 }
 
-.order-form__container {
-  @media (min-width: 768px) {
-    position: relative;
-    padding: 0;
-  }
+.order-form__main-title{
+  margin-bottom: 17px;
 }
 
 .order-form__text-top {
-  margin-top: 18px;
   margin-bottom: 26px;
+  padding: 0 30px;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -34,14 +31,14 @@
 .order-form__fieldset {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-  margin: 0;
+  margin: 0 30px;
   padding: 0;
   padding-bottom: 30px;
   border: 0;
   border-top: 1px solid @tiffany;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     padding: 50px 0;
     padding-left: 220px;
     padding-right: 30px;
@@ -192,7 +189,7 @@
     line-height: 18px;
   }
 
-  &--radio {
+  &--type-radio {
     padding: 10px 20px 10px 60px;
 
     @media (min-width: @tablet-width) {
@@ -202,7 +199,7 @@
     }
   }
 
-  &--checkbox {
+  &--color-checkbox {
     padding: 10px 20px 10px 60px;
     max-width: 260px;
 
@@ -296,7 +293,7 @@
 }
 
 .order-form__input {
-  &--radio {
+  &--type-radio {
     appearance: none;
 
     &::before {
@@ -336,7 +333,7 @@
     }
   }
 
-  &--checkbox {
+  &--color-checkbox {
     appearance: none;
 
     &::before {
