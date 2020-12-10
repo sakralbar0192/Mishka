@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   padding-bottom: 52px;
-  background-image: url("../../img/zigzag-line.svg");
+  background-image: url("../img/zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% 6px;
@@ -10,8 +10,8 @@
     padding-top: 84px;
     padding-bottom: 47px;
     background-image:
-      url("../../img/zigzag-line.svg"),
-      url("../../img/review.jpg");
+      url("../img/zigzag-line.svg"),
+      url("../img/review.jpg");
     background-position: center bottom, top left;
     background-size: 100% 17px, auto;
   }
@@ -146,17 +146,29 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     border: 0;
   }
 
   &--back {
-    background-image: url("../../img/huge-arrow-left.svg");
+    background-image: url("../img/huge-arrow-left.svg");
   }
 
   &--forward {
-    background-image: url("../../img/huge-arrow-right.svg");
+    background-image: url("../img/huge-arrow-right.svg");
   }
 }
 

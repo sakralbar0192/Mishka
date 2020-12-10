@@ -56,6 +56,16 @@
   height: 30px;
   background-repeat: no-repeat;
   background-position: center;
+
+  .page-footer__svg {
+    &:hover {
+      fill: @tiffany-5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .page-footer__copyright {
@@ -81,13 +91,16 @@
       margin-left: 27px;
     }
   }
-}
 
-.page-footer__copyright-logo {
-  margin-left: 25px;
-  fill: @tiffany-2;
+  &:hover {
+    .page-footer__svg {
+      fill: @tiffany-5;
+    }
+  }
 
-  @media (min-width: @tablet-width) {
-    margin-left: 27px;
+  &:active {
+    .page-footer__svg {
+      opacity: 0.3;
+    }
   }
 }

@@ -16,7 +16,7 @@
       height: 81px;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url("../../img/flag.svg");
+      background-image: url("../img/flag.svg");
     }
   }
 
@@ -102,6 +102,14 @@
       text-underline-position: under;
       color: @black-2;
       text-decoration-color: @tiffany;
+
+      &:hover {
+        color: @tiffany-5;
+      }
+
+      &:active {
+        text-decoration: none;/*очему то это свойство не работает, не могу понять в чем дело*/
+      }
     }
   }
 }
@@ -111,7 +119,7 @@
   margin-bottom: 42px;
   width: 100%;
   height: 454px;
-  background-image: url("../../img/map-pin.svg"), url("../../img/map-tablet.png");
+  background-image: url("../img/map-pin.svg"), url("../img/map-tablet.png");
   background-repeat: no-repeat;
   background-position: 54% 145px, center;
 
