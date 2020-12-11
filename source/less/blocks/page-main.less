@@ -4,10 +4,18 @@
 
   @media (min-width: @tablet-width) {
     grid-gap: 40px;
+
+    &--catalog {
+     grid-gap: 53px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-gap: 50px;
+
+    &--catalog {
+      grid-gap: 57px;
+    }
   }
 }
 
@@ -75,6 +83,25 @@
   }
 
   &--catalog {
-    padding-bottom: 103px;
+    padding-top: 72px;
+    padding-bottom: 73px;
+    margin-bottom: 30px;
+    background-color: @white-2;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 35px;
+      padding-bottom: 86px;
+      margin-bottom: 67px;
+      background-image: url("../img/zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 111px;
+      padding-bottom: 115px;
+      background-size: 100% 34px;
+    }
   }
 }
