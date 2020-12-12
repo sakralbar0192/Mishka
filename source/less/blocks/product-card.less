@@ -1,5 +1,6 @@
 .product-card {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   @media (min-width: @desktop-width) {
@@ -37,6 +38,14 @@
 
   @media (min-width: @desktop-width) {
     padding: 27px 30px 24px 26px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(@black, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(@black, 0.1);
   }
 
   .product-card__top-info {
@@ -88,7 +97,20 @@
       padding: 0;
       border: 0;
       background-color: @white;
-      opacity: 0.2;
+      outline: none;
+
+      .product-card__svg {
+        opacity: 0.2;
+
+        &:hover {
+          fill: @tiffany-2;
+          opacity: 1;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
     }
   }
 }
