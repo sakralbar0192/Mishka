@@ -8,7 +8,11 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <a href="#" class="page-header__logo"></a>
+    <picture>
+      <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+      <img class="page-header__logo" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
+    </picture>
     <nav class="page-header__main-nav main-nav">
       <button class="main-nav__toggle main-nav__toggle--close" type="button">
         <span class="main-nav__toggle-signature main-nav__toggle-signature--open visually-hidden current-signature">Открыть меню</span>
@@ -59,7 +63,7 @@
         <dt class="main-suggestion__description">Высота:</dt>
         <dd class="main-suggestion__value">15 см</dd>
       </dl>
-      <img src="img/triple-set.jpg" alt="Вязаные корзинки" class="main-suggestion__img" width="260" height="315">
+      <img class="main-suggestion__img" src="img/triple-set.jpg" srcset="img/triple-set@2x.jpg 2x" alt="Вязаные корзинки"  width="260" height="315">
       <p class="main-suggestion__price">Цена: 990 руб.</p>
       <a href="#" class="button main-suggestion__button">Заказать</a>
     </section>

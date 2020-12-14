@@ -4,29 +4,27 @@
 
 .page-header__logo {
   position: absolute;
-  top: 0;
+  top: 22px;
   left: 0;
   right: 0;
-  width: 150px;
-  height: 80px;
+  display: block;
   margin: 0 auto;
-  background-image: url("../img/mishka-logo-mobile.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
 
   @media (min-width: @tablet-width) {
-    top: 5px;
-    left: 30px;
+    top: 22px;
+    left: 50px;
+    height: 46;
+    width: 113px;
     margin: 0;
-    background-image: url("../img/mishka-logo-tablet.svg");
   }
 
   @media (min-width: @desktop-width) {
+    top: 10px;
     left: 0;
     right: 0;
+    height: 75px;
+    width: 150px;
     margin: 0 auto;
-    background-image: url("../img/mishka-logo-desktop.svg");
   }
 
   &:hover {
@@ -46,8 +44,12 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 70%;
+    bottom: 22px;
     right: 50px;
     display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+
   }
 }

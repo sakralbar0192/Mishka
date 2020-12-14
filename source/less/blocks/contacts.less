@@ -119,9 +119,14 @@
   margin-bottom: 42px;
   width: 100%;
   height: 454px;
-  background-image: url("../img/map-pin.svg"), url("../img/map-tablet.png");
+  background-image: url("../img/map-pin.svg"), url("../img/map.jpg");
   background-repeat: no-repeat;
   background-position: 54% 145px, center;
+  background-size: auto, 768px 454px;
+
+  @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-pin.svg"), url("../img/map@2x.jpg");
+    }
 
   @media (min-width: @tablet-width) {
     height: 457px;
