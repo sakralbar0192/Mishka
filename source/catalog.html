@@ -8,13 +8,19 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <a href="#" class="page-header__logo"></a>
+    <a href="index.html" class="page-header__logo-link">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+        <img class="page-header__logo" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
+      </picture>
+    </a>
     <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle main-nav__toggle--close" type="button">
+      <button class="main-nav__toggle" type="button">
         <span class="main-nav__toggle-signature main-nav__toggle-signature--open visually-hidden current-signature">Открыть меню</span>
         <span class="main-nav__toggle-signature main-nav__toggle-signature--close visually-hidden">Закрыть меню</span>
       </button>
-      <ul class="main-nav__list main-nav__list--site-list ">
+      <ul class="main-nav__list main-nav__list--site-list">
         <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
         <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
       </ul>
@@ -44,7 +50,13 @@
       <h1 class="page-main__title page-main__title--catalog">Каталог товаров</h1>
       <ul class="products__list">
         <li class="product-card products-list__item">
-          <a href="#" class="product-card__img-link"><img class="product-card__img" src="img/photo-1-mobile.jpg" alt="Зайчик-попрыгайчик" width="260" height="195"></a>
+          <a href="#" class="product-card__img-link">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img class="product-card__img" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" width="260" height="195">
+            </picture>
+          </a>
           <div class="product-card__info">
             <div class="product-card__top-info">
               <a href="#" class="product-card__title">Зайчик-попрыгайчик</a>
@@ -60,7 +72,13 @@
           </div>
         </li>
         <li class="product-card products-list__item">
-          <a href="#" class="product-card__img-link"><img class="product-card__img" src="img/photo-2-mobile.jpg" alt="Корзинка для белья" width="260" height="195"></a>
+          <a href="#" class="product-card__img-link">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img class="product-card__img" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" width="260" height="195">
+            </picture>
+          </a>
           <div class="product-card__info">
             <div class="product-card__top-info">
               <a href="#" class="product-card__title">Корзинка для белья</a>
@@ -76,7 +94,13 @@
           </div>
         </li>
         <li class="product-card products-list__item">
-          <a href="#" class="product-card__img-link"><img class="product-card__img" src="img/photo-3-mobile.jpg" alt="Корзинка для игрушек" width="260" height="195"></a>
+          <a href="#" class="product-card__img-link">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img class="product-card__img" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Корзинка для игрушек" width="260" height="195">
+            </picture>
+          </a>
           <div class="product-card__info">
             <div class="product-card__top-info">
               <a href="#" class="product-card__title">Большая корзинка<br/>для игрушек</a>
@@ -96,7 +120,10 @@
     <section class="production-process">
       <div class="production-proces__wrapper">
         <div class="production-process__video">
-          <img class="production-process__image" src="img/video-desktop.jpg" alt="видео процесса производства" width="260" height="150">
+          <picture>
+              <source media="(min-width: 768px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <img class="production-process__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="видео процесса производства" width="260" height="150">
+            </picture>
           <button class="production-process__play-button"><span class="visually-hidden">Играть видео</span></button>
         </div>
         <div class="production-process__info-wrapper">
@@ -106,7 +133,6 @@
         </div>
       </div>
     </section>
-
   </main>
   <footer class="page-footer">
       <a href="#" class="page-footer__logo">

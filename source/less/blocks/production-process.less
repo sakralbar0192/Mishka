@@ -89,11 +89,15 @@
       }
 
       .production-process__image {
-        height: 150px; /*временно до работы с графикой*/
+        vertical-align: bottom;
 
         @media (min-width: @tablet-width) {
-          width: 682px;/*временно до работы с графикой*/
-          height: 455px;/*временно до работы с графикой*/
+          width: 668px;
+          height: 455px;
+        }
+
+        @media (min-width: @desktop-width) {
+          width: 682px;
         }
       }
 

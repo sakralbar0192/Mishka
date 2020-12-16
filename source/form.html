@@ -8,13 +8,19 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <a href="#" class="page-header__logo"></a>
+    <a href="index.html" class="page-header__logo-link">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+        <img class="page-header__logo" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
+      </picture>
+    </a>
     <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle main-nav__toggle--close" type="button">
+      <button class="main-nav__toggle" type="button">
         <span class="main-nav__toggle-signature main-nav__toggle-signature--open visually-hidden current-signature">Открыть меню</span>
         <span class="main-nav__toggle-signature main-nav__toggle-signature--close visually-hidden">Закрыть меню</span>
       </button>
-      <ul class="main-nav__list main-nav__list--site-list ">
+      <ul class="main-nav__list main-nav__list--site-list">
         <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
         <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
       </ul>
