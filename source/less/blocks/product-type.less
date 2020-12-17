@@ -1,13 +1,6 @@
-.product-type {
-  @media (min-width: @tablet-width) {
-    background-color: @white-6;
-  }
-}
-
-.product-type__list {
+.product-type{
   position: relative;
   display: flex;
-
   flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
@@ -15,14 +8,14 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  z-index: 1;
+
+  @media (max-width: @mobile-only ) {
+    flex-direction: column;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
-    max-width: 910px;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: 1240px;
   }
 
   &::after {
@@ -32,15 +25,17 @@
       bottom: -1px;
       width: 100%;
       height: 40px;
+      min-width: 770px;
       background-repeat: no-repeat;
       background-position: center bottom;
-      background-image: url("../img/zigzag-fill.svg");
-      background-size: auto 24px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-size: 100% auto;
       z-index: 1;
     }
 
     @media (min-width: @desktop-width) {
-      background-size: auto 34px;
+      min-width: 1250px;
+      background-size: 100% 34px;
     }
   }
 }
@@ -70,7 +65,6 @@
     font-size: 20px;
     line-height: 31px;
   }
-
 
   &::before {
     position: absolute;

@@ -30,9 +30,9 @@
   }
 
   &--site-list {
-    @media (max-width: @mobile-only) {
-      display: none;
-    }
+    // @media (max-width: @mobile-only) {
+    //   display: none;
+    // }
 
     @media (min-width: @tablet-width) {
       justify-content: flex-start;
@@ -52,9 +52,9 @@
   }
 
   &--user-list {
-    @media (max-width: @mobile-only) {
-      display: none;
-    }
+    // @media (max-width: @mobile-only) {
+    //   display: none;
+    // }
 
     @media (min-width: @tablet-width) {
       justify-content: flex-end;
@@ -90,6 +90,7 @@
 
   @media (max-width: @mobile-only) {
     min-width: 50%;
+    flex-grow: 1;
   }
 
   &--site-list {
