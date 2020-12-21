@@ -103,7 +103,7 @@
       }
 
       &:active {
-        text-decoration: none;/*очему то это свойство не работает, не могу понять в чем дело*/
+        text-decoration: none;/*почему то это свойство не работает, не могу понять в чем дело*/
       }
     }
   }
@@ -111,25 +111,31 @@
 
 .contacts__map {
   position: relative;
-  margin-bottom: 42px;
   width: 100%;
-  height: 454px;
-  background-image: url("../img/map-pin.svg"), url("../img/map.jpg");
-  background-repeat: no-repeat;
-  background-position: 54% 145px, center;
-  background-size: auto, 768px 454px;
+  height: 453px;
+  margin-bottom: 42px;
 
-  @media (min-resolution: 2dppx) {
-    background-image:
-      url("../img/map-pin.svg"),
-      url("../img/map@2x.jpg");
+  &::before {
+    content: "";
+    position: absolute;
+    top: 32%;
+    left: 43%;
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 30%;
+      left: 47%;
+    }
   }
 
   @media (min-width: @tablet-width) {
     height: 457px;
     margin-bottom: 55px;
-    background-position: 51% 139px, center;
-    background-size: auto, 100% 454px;
+    background-position: 51% 139px;
   }
 
   @media (min-width: @desktop-width) {
@@ -138,6 +144,15 @@
     grid-row-end: -1;
     height: 458px;
     margin: 0;
+  }
+
+  .contacts__img {
+    width: 100%;
+    height: 454px;
+
+    @media (min-width: @tablet-width) {
+      height: 457px;
+    }
   }
 }
 

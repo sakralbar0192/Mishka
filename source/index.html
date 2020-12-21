@@ -132,6 +132,14 @@
         </dl>
       </div>
       <div class="contacts__map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1150px)" srcset="../img/map-desktop.webp 1x, ../img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="../img/map-tablet.webp 1x, ../img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="../img/map-mobile.webp 1x, ../img/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1150px)" srcset="../img/map-desktop.jpg 1x, ../img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="../img/map-tablet.jpg 1x, ../img/map-tablet@2x.jpg 2x">
+          <img class="contacts__img" src="../img/map-mobile.jpg" alt="Карта" width="320" height="454"/>
+        </picture>
           <!--<iframe class="contacts__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQ~RGgKwA"></iframe>-->
       </div>
       <a href="feedback.html" class="button contacts__button">Напишите нам</a>
