@@ -4,7 +4,6 @@
   grid-template-columns: 1fr;
   align-items: start;
   padding: 0 30px 38px 30px;
-
   background-image: url("../img/zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -13,8 +12,7 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
-    padding: 0 50px;
-    padding-bottom: 63px;
+    padding: 0 50px 63px;
     background-size: 100% 17px;
   }
 
@@ -25,8 +23,7 @@
 }
 
 .main-suggestion__title {
-  margin: 0;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
@@ -50,8 +47,7 @@
 }
 
 .main-suggestion__name {
-  margin: 0;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
   font-size: 25px;
   line-height: 30px;
 
@@ -65,8 +61,7 @@
 
   @media (min-width: @desktop-width) {
     grid-row-start: 1;
-    margin-top: 64px;
-    margin-bottom: 12px;
+    margin-top: 64px 0 12px;
     padding-left: 175px;
     font-size: 53px;
     line-height: 57px;
@@ -74,8 +69,7 @@
 }
 
 .main-suggestion__text {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -88,8 +82,6 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 175px;
-    font-size: 17px;
-    line-height: 30px;
   }
 }
 
@@ -99,15 +91,13 @@
   grid-template-columns: auto 1fr;
   grid-row-gap: 7px;
   max-width: 300px;
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    margin-right: 40px;
-    margin-bottom: 50px;
+    margin: 0 40px 50px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -121,8 +111,7 @@
 
   .main-suggestion__value {
     margin: 0;
-    padding-left: 30px;
-    padding-bottom: 11px;
+    padding: 0 0 11px 30px;
     border-bottom: 1px solid @white-3;
   }
 }
@@ -135,8 +124,7 @@
     grid-row-end: -1;
     grid-column-start: 2;
     justify-self: end;
-    margin-top: 12px;
-    margin-bottom: 0;
+    margin: 12px 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -159,8 +147,7 @@
 }
 
 .main-suggestion__price {
-  margin: 0;
-  margin-bottom: 23px;
+  margin: 0 0 23px;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
