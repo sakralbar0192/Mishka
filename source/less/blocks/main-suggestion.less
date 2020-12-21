@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
-  padding: 5px 30px 38px 30px;
+  padding: 0 30px 38px 30px;
 
   background-image: url("../img/zigzag-line.svg");
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
     padding: 0 50px;
-    padding-bottom: 68px;
+    padding-bottom: 63px;
     background-size: 100% 17px;
   }
 
@@ -81,7 +81,7 @@
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -127,7 +127,7 @@
   }
 }
 
-.main-suggestion__img {
+.main-suggestion__img-wrapper {
   margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
@@ -135,18 +135,27 @@
     grid-row-end: -1;
     grid-column-start: 2;
     justify-self: end;
-    width: 335px;
-    height: 405px;
     margin-top: 12px;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 1;
-    width: 525px;
-    height: 640px;
     margin-top: 0;
     z-index: -1;
+  }
+}
+
+.main-suggestion__img {
+
+  @media (min-width: @tablet-width) {
+    width: 335px;
+    height: 405px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 635px;
   }
 }
 
@@ -158,7 +167,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     padding-left: 72px;
     font-size: 20px;
     line-height: 24px;
