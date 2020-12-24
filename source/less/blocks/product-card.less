@@ -1,0 +1,116 @@
+.product-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.product-card__img-link {
+  .product-card__img {
+    vertical-align: bottom;
+
+    @media (min-width: @tablet-width) {
+      width: 334px;
+      height: 334px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 316px;
+      height: 462px;
+    }
+  }
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 27px;
+  border: 1px solid @white-3;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 30px 24px 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 30px 24px 26px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(@black, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(@black, 0.1);
+  }
+
+  .product-card__top-info {
+    padding-bottom: 17px;
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 13px;
+    }
+
+    .product-card__title {
+      display: block;
+      margin-bottom: 5px;
+      color: @black;
+
+      @media (min-width: @tablet-width) {
+        font-size: 20px;
+      }
+    }
+
+    .product-card__description {
+      margin: 0;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 30px;
+
+      @media (min-width: @tablet-width) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .product-card__bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+    border-top: 1px solid @white-3;
+
+    .product-card__price {
+      margin: 0;
+      font-size: 15px;
+
+      @media (min-width: @tablet-width) {
+        font-size: 17px;
+      }
+    }
+
+    .product-card__button {
+      padding: 0;
+      border: 0;
+      background-color: @white;
+      outline: none;
+
+      .product-card__svg {
+        opacity: 0.2;
+
+        &:hover {
+          fill: @tiffany-2;
+          opacity: 1;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

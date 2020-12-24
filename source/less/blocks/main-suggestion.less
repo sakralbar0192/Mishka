@@ -1,68 +1,186 @@
 .main-suggestion {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 35px;
-  background-image: url("../../img/zigzag-line-desktop.svg");
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  padding: 0 30px 38px 30px;
+  background-image: url("../img/zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: 100% 6px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 0 50px 63px;
+    background-size: 100% 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 97px;
+    background-size: 91% 23px;
+  }
 }
 
 .main-suggestion__title {
-  margin: 0;
-  margin-bottom: 17px;
+  margin: 0 0 15px;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
+  color: @tiffany-2;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 7px;
+    right: 63px;
+    width: 100px;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 72px;
+    right: 0;
+    left: 82px;
+  }
 }
 
 .main-suggestion__name {
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 0 0 6px;
   font-size: 25px;
   line-height: 30px;
-  order: -1;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 39px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    margin: 64px 0 12px;
+    padding-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .main-suggestion__text {
-  margin: 0;
-  margin-bottom: 28px;
+  margin: 0 0 30px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+  }
 }
 
 .main-suggestion__add-info {
-  margin: 0;
-  margin-bottom: 24px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 7px;
+  max-width: 300px;
+  margin: 0 0 30px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
 
-  dt {
-    float: left;
-    clear: both;
-    width: 100px;
-    margin-top: 3px;
-    padding-bottom: 15px;
+  @media (min-width: @tablet-width) {
+    margin: 0 40px 50px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+    padding-left: 175px;
+  }
+
+  .main-suggestion__description {
     border-bottom: 1px solid @white-3;
   }
 
-  dd {
-    width: 200px;
-    margin-top: 3px;
-    padding-bottom: 12px;
+  .main-suggestion__value {
+    margin: 0;
+    padding: 0 0 11px 30px;
     border-bottom: 1px solid @white-3;
+  }
+}
+
+.main-suggestion__img-wrapper {
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    justify-self: end;
+    margin: 12px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    margin-top: 0;
+    z-index: -1;
   }
 }
 
 .main-suggestion__img {
-  margin-bottom: 27px;
+  @media (min-width: @tablet-width) {
+    width: 335px;
+    height: 405px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 635px;
+  }
 }
 
 .main-suggestion__price {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 23px;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+    padding-left: 72px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    margin-bottom: 0;
+    padding-left: 248px;
+  }
+}
+
+.main-suggestion__button {
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    align-self: end;
+    justify-self: start;
+    width: 292px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 175px;
+  }
 }
