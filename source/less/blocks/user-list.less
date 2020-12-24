@@ -1,0 +1,31 @@
+.user-list__item {
+  position: relative;
+  min-width: 260px;
+
+
+  &::before {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--search {
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-image: url("../../img/search.svg");
+    }
+  }
+
+  &--cart {
+    &::before {
+      content: "";
+      width: 18px;
+      height: 21px;
+      background-image: url("../../img/cart.svg");
+    }
+  }
+}
