@@ -1,243 +1,34 @@
 .main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   position: relative;
 
-  @media (max-width: @mobile-only) {
-    flex-direction: column;
-    padding-top: 81px;
-  }
-
-  @media (min-width: @tablet-width) {
-    flex-direction: column-reverse;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  li {
+    box-sizing: border-box;
+    min-height: 80px;
+    padding: 27px 30px 27px 75px;
   }
 }
 
 .main-nav__list {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 
-  @media (max-width: @mobile-only) {
-    width: 100%;
-  }
+  a {
+    color: @black;
 
-  &--site-list {
-    // @media (max-width: @mobile-only) {
-    //   display: none;
-    // }
-
-    @media (min-width: @tablet-width) {
-      justify-content: flex-start;
-      padding-left: 35px;
-      font-size: 15px;
-      background-color: @white-6;
+    &:hover {
+      opacity: 0.6;
     }
 
-    @media (min-width: @desktop-width) {
-      padding: 0 75px 0 15px;
-      font-size: 17px;
-      border-bottom: 1px solid rgba(@black, 0.1);
-      background-color: @white;
-    }
-  }
-
-  &--user-list {
-    // @media (max-width: @mobile-only) {
-    //   display: none;
-    // }
-
-    @media (min-width: @tablet-width) {
-      justify-content: flex-end;
-      border-bottom: 1px solid rgba(@black, 0.1);
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 75px;
-    }
-  }
-
-  &--additional-list {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: flex;
-      grid-column-start: 1;
-      grid-column-end: -1;
-      padding-left: 20px;
-      font-size: 15px;
-      background-color: @white-6;
-    }
-  }
-}
-
-.main-nav__item {
-  position: relative;
-  box-sizing: border-box;
-  padding: 28px 30px 27px 76px;
-  box-shadow:
-    0 1px 0 @white-3,
-    inset 0 1px 0 @white-3;
-
-  @media (max-width: @mobile-only) {
-    min-width: 50%;
-    flex-grow: 1;
-  }
-
-  &--site-list {
-    @media (min-width: @tablet-width) {
-      padding: 21px 20px 21px 15px;
-      box-shadow: none;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 33px 35px 31px 35px;
-      border-right: 1px solid rgba(@black, 0.1);
-    }
-  }
-
-  &--user-list {
-    @media (min-width: @tablet-width) {
-      padding: 33px 35px 31px 80px;
-      width: 315px;
-      border-left: 1px solid rgba(@black, 0.1);
-      box-shadow: none;
-    }
-  }
-
-  &--search {
-    @media (min-width: @tablet-width) {
-      width: 83px;
-      padding: 0;
-
-      .main-nav__search-text {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-      }
-    }
-  }
-
-  &--additional-list {
-    @media (min-width: @desktop-width) {
-      padding: 20px 30px;
-      box-shadow: none;
-    }
-  }
-}
-
-.main-nav__link {
-  color: @black;
-
-  .main-nav__svg {
-    position: absolute;
-    top: 30px;
-    left: 31px;
-    opacity: 0.2;
-    fill: #000000;
-
-    @media (min-width: @tablet-width) {
-      top: 35px;
-      left: 31px;
-    }
-  }
-
-  &:hover {
-    opacity: 0.6;
-
-    .main-nav__svg {
-      fill: @tiffany-2;
-      opacity: 1;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-
-    .main-nav__svg {
-      fill: @tiffany-2;
+    &:active {
+      opacity: 0.3;
     }
   }
 }
 
 .main-nav__toggle {
-  display: none;
-
-  @media (max-width: @mobile-only) {
-    position: absolute;
-    top: 32px;
-    right: 31px;
-    display: block;
-    width: 20px;
-    height: 14px;
-    padding: 0;
-    border: 0;
-    background-color: @white;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: auto;
-      background-color: @black;
-      box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
-    }
-
-    &--close {
-      top: 29px;
-      right: 34px;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: block;
-        width: 26px;
-        height: 2px;
-        margin: auto;
-        background-color: @black;
-      }
-
-      &::before {
-        transform: rotate(45deg);
-        box-shadow: none;
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-}
-
-.main-nav__toggle-signature {
-  display: none;
-
-  &--current-signature {
-    display: block;
-  }
+  position: absolute;
+  top: -50px;
+  right: 25px;
+  border: 0;
 }
