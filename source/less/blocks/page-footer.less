@@ -1,15 +1,28 @@
 .page-footer {
+  background-color: @white-2;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1150px 1fr;
+  }
+}
+
+.page-footer__wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: center;
   padding: 0 30px;
-  background-color: @white-2;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr;
     padding: 48px 50px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: -2;
   }
 }
 

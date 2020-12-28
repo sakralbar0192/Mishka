@@ -8,49 +8,58 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <picture>
-      <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
-      <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-      <img class="page-header__logo" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
-    </picture>
-    <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="main-nav__toggle-signature main-nav__toggle-signature--open visually-hidden main-nav__toggle-signature--current-signature">Открыть меню</span>
-        <span class="main-nav__toggle-signature main-nav__toggle-signature--close visually-hidden">Закрыть меню</span>
+    <section class="page-header__top-menu top-menu">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
+      <div class="top-menu__logo">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+          <img class="top-menu__logo-img" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
+        </picture>
+      </div>
+      <button class="top-menu__nav-toggle" type="button">
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--open visually-hidden top-menu__nav-toggle-signature--current-signature">Открыть меню</span>
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--close visually-hidden">Закрыть меню</span>
       </button>
-      <ul class="main-nav__list main-nav__list--site-list">
-        <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-        <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
-      </ul>
-      <ul class="main-nav__list main-nav__list--user-list">
-        <li class="main-nav__item main-nav__item--user-list main-nav__item--search">
-          <a class="main-nav__link" href="#">
-            <svg class="main-nav__svg" width="18" height="18">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-            <span class="main-nav__search-text">Поиск по сайту</span>
-          </a>
-        </li>
-        <li class="main-nav__item main-nav__item--user-list main-nav__item--cart">
-          <a class="main-nav__link" href="#">
-            <svg class="main-nav__svg" width="21" height="18">
-              <use xlink:href="img/sprite.svg#cart"></use>
-            </svg>
-            Корзина: пока пуста
-          </a>
-        </li>
-      </ul>
-      <ul class="main-nav__list main-nav__list--additional-list">
-        <li class="main-nav__item main-nav__item--additional-list"><a class="main-nav__link" href="#">Новые поступления</a></li>
-        <li class="main-nav__item main-nav__item--additional-list"><a class="main-nav__link" href="#">Распродажа</a></li>
-      </ul>
-    </nav>
-    <p class="page-header__text">Бесплатная доставка по России</p>
-  </header>
-  <main class="page-main">
-    <section class="hero-block">
+      <nav class="top-menu__nav top-menu__nav--site">
+        <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--site">
+          <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="catalog.html">Каталог товаров</a></li>
+          <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="form.html">Вязание на заказ</a></li>
+        </ul>
+      </nav>
+      <nav class="top-menu__nav top-menu__nav--user">
+        <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--user">
+          <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--search">
+            <a class="top-menu__nav-link top-menu__nav-link--user" href="#">
+              <svg class="top-menu__nav-item-svg" width="21" height="18">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+              <span class="top-menu__nav-item-text top-menu__nav-item-text--search">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--cart">
+            <a class="top-menu__nav-link top-menu__nav-link--user top-menu__nav-link--cart" href="#">
+              <svg class="top-menu__nav-item-svg" width="21" height="18">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="top-menu__nav top-menu__nav--add">
+        <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--add">
+          <li class="top-menu__nav-item top-menu__nav-item--add"><a class="top-menu__nav-link" href="#">Новые поступления</a></li>
+          <li class="top-menu__nav-item top-menu__nav-item--add"><a class="top-menu__nav-link" href="#">Распродажа</a></li>
+        </ul>
+      </nav>
+      <p class="top-menu__text">Бесплатная доставка по России</p>
+      <div class="top-menu__down-row-background"></div>
+    </section>
+    <section class="page-header__hero-block hero-block">
       <h1 class="hero-block__title page-main__title">Милые штуки ручной<br/>работы для дома</h1>
-      <picture>
+      <div class="hero-block__img-wrapper">
+        <picture>
           <source type="image/webp" media="(min-width: 1150px)" srcset="../img/hero-desktop.webp 1x, ../img/hero-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="../img/hero-tablet.webp 1x, ../img/hero-tablet@2x.webp 2x">
           <source type="image/webp" srcset="../img/hero-mobile.webp 1x, ../img/hero-mobile@2x.webp 2x">
@@ -58,11 +67,16 @@
           <source media="(min-width: 768px)" srcset="../img/hero-tablet.jpg 1x, ../img/hero-tablet@2x.jpg 2x">
           <img class="hero-block__img" src="../img/hero-mobile.jpg" alt="hero-изображение" width="320" height="505"/>
         </picture>
-      <ul class="product-type hero-block__product-type">
-        <li class="product-type__item"><a href="interior.html" class="product-type__link product-type__link--interior">Предметы<br/>интерьера</a></li>
-        <li class="product-type__item"><a href="toys.html" class="product-type__link product-type__link--toys">Детские<br/>игрушки</a></li>
-      </ul>
+      </div>
+      <section class="product-type hero-block__product-type">
+        <ul class="product-type__wrapper">
+          <li class="product-type__item"><a href="interior.html" class="product-type__link product-type__link--interior">Предметы<br/>интерьера</a></li>
+          <li class="product-type__item"><a href="toys.html" class="product-type__link product-type__link--toys">Детские<br/>игрушки</a></li>
+        </ul>
+      </section>
     </section>
+  </header>
+  <main class="page-main">
     <section class="main-suggestion">
       <h3 class="main-suggestion__name">Вязаные корзинки</h3>
       <h2 class="main-suggestion__title">Товар недели</h2>
@@ -91,34 +105,36 @@
     <section class="about-us">
       <h2 class="about-us__title">Коротко о нас:</h2>
       <ul class="about-us__list">
-        <li class="about-us__item about-us__item--flower">Экологически<br/>чистые материалы</li>
-        <li class="about-us__item about-us__item--money">Скандинавский стиль<br/>по российской цене</li>
-        <li class="about-us__item about-us__item--heart">Увеличивает лайки<br/>на фотографиях</li>
-        <li class="about-us__item about-us__item--ball">Связано вручную<br/>с любовью и умилением</li>
-        <li class="about-us__item about-us__item--rocket">Поддержка отечественного<br/>производителя</li>
-        <li class="about-us__item about-us__item--gift">Поставляется<br/>в подарочной упаковке</li>
+        <li class="about-us__item about-us__item--flower about-us__item--left">Экологически<br/>чистые материалы</li>
+        <li class="about-us__item about-us__item--money about-us__item--left">Скандинавский стиль<br/>по российской цене</li>
+        <li class="about-us__item about-us__item--heart about-us__item--left">Увеличивает лайки<br/>на фотографиях</li>
+        <li class="about-us__item about-us__item--ball about-us__item--right">Связано вручную<br/>с любовью и умилением</li>
+        <li class="about-us__item about-us__item--rocket about-us__item--right">Поддержка отечественного<br/>производителя</li>
+        <li class="about-us__item about-us__item--gift about-us__item--right">Поставляется<br/>в подарочной упаковке</li>
       </ul>
     </section>
     <section class="reviews">
-      <div class="container slider">
+      <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
-        <ul class="reviews__list slider__list">
-          <li class="reviews__item slider__item slider__item--current">
-            <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-            <cite class="reviews__author">Анастасия Красильникова<br/><span class="reviews__nickname">@misssssiskras</span></cite>
-          </li>
-          <li class="reviews__item slider__item">
-            <blockquote class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-            <cite class="reviews__author">Екатерина Красильникова<br/><span class="reviews__nickname">@misssssiskras2</span></cite>
-          </li>
-          <li class="reviews__item slider__item">
-            <blockquote class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-            <cite class="reviews__author">Елена Красильникова<br/><span class="reviews__nickname">@misssssiskras3</span></cite>
-          </li>
-        </ul>
-        <div class="reviews__controls slider__controls">
-          <button class="reviews__control-button reviews__control-button--back" type="button"><span class="visually-hidden">назад</span></button>
-          <button class="reviews__control-button reviews__control-button--forward" type="button"><span class="visually-hidden">вперед</span></button>
+        <div class="slider reviews__slider">
+          <ul class="slider__wrapper">
+            <li class="slider__item slider__item--current">
+              <blockquote class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+              <cite class="slider__author">Анастасия Красильникова<br/><span class="slider__nickname">@misssssiskras</span></cite>
+            </li>
+            <li class="slider__item">
+              <blockquote class="slider__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+              <cite class="slider__author">Екатерина Красильникова<br/><span class="slider__nickname">@misssssiskras2</span></cite>
+            </li>
+            <li class="slider__item">
+              <blockquote class="slider__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+              <cite class="slider__author">Елена Красильникова<br/><span class="slider__nickname">@misssssiskras3</span></cite>
+            </li>
+          </ul>
+          <div class="slider__controls">
+            <button class="slider__control-button slider__control-button--back" type="button"><span class="visually-hidden">назад</span></button>
+            <button class="slider__control-button slider__control-button--forward" type="button"><span class="visually-hidden">вперед</span></button>
+          </div>
         </div>
         <a href="review.html" class="button reviews__button">Написать</a>
       </div>
@@ -132,22 +148,23 @@
           <dt class="contacts__desc">адрес:</dt>
           <dd class="contacts__value">г. Санкт-Петербург<br/>ул. Большая Конюшенная<br/>д. 19/8, офис 101</dd>
         </dl>
-      </div>
-      <div class="contacts__map">
-        <picture>
-          <source type="image/webp" media="(min-width: 1150px)" srcset="../img/map-desktop.webp 1x, ../img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="../img/map-tablet.webp 1x, ../img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="../img/map-mobile.webp 1x, ../img/map-mobile@2x.webp 2x">
-          <source media="(min-width: 1150px)" srcset="../img/map-desktop.jpg 1x, ../img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="../img/map-tablet.jpg 1x, ../img/map-tablet@2x.jpg 2x">
-          <img class="contacts__img" src="../img/map-mobile.jpg" alt="Карта" width="320" height="454"/>
-        </picture>
+        <div class="contacts__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="../img/map-desktop.webp 1x, ../img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="../img/map-tablet.webp 1x, ../img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="../img/map-mobile.webp 1x, ../img/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="../img/map-desktop.jpg 1x, ../img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="../img/map-tablet.jpg 1x, ../img/map-tablet@2x.jpg 2x">
+            <img class="contacts__img" src="../img/map-mobile.jpg" alt="Карта" width="320" height="454"/>
+          </picture>
           <!--<iframe class="contacts__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQ~RGgKwA"></iframe>-->
+        </div>
+        <a href="feedback.html" class="button contacts__button">Напишите нам</a>
       </div>
-      <a href="feedback.html" class="button contacts__button">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">
+    <div class="page-footer__wrapper">
       <a href="#" class="page-footer__logo">
         <svg class="page-footer__svg" width="100" height="35">
           <use xlink:href="img/sprite.svg#footer-logo"></use>
@@ -179,12 +196,25 @@
           </a>
         </li>
       </ul>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
       <svg class="page-footer__svg" width="27" height="34">
         <use xlink:href="img/sprite.svg#html-academy"></use>
       </svg>
-    </a>
+      </a>
+    </div>
   </footer>
+<section class="modal">
+  <div class="modal__wrapper">
+    <h2 class="modal-title">Добавить в корзину</h2>
+    <p class="modal__text">Выберите размер:</p>
+    <div class="modal__size-buttons">
+      <button class="modal__size-button modal__size-button--current">s</button>
+      <button class="modal__size-button">m</button>
+      <button class="modal__size-button">l</button>
+    </div>
+    <button class="modal__button">Добавить</button>
+  </div>
+</section>
 </body>
 </html>

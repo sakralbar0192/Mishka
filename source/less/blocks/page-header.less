@@ -1,52 +1,25 @@
 .page-header {
-  position: relative;
-}
-
-.page-header__logo {
-  position: absolute;
-  top: 22px;
-  left: 0;
-  right: 0;
-  display: block;
-  margin: 0 auto;
-  z-index: 1;
+  display: grid;
+  grid-template-rows: 1fr 17px auto;
+  grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
-    top: 22px;
-    left: 50px;
-    height: 46;
-    width: 113px;
-    margin: 0;
+    grid-template-rows: 1fr 66px auto;
   }
 
-  @media (min-width: @desktop-width) {
-    top: 10px;
-    left: 0;
-    right: 0;
-    height: 75px;
-    width: 150px;
-    margin: 0 auto;
+  .page-header__top-menu {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    z-index: 1
   }
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
+  .page-header__hero-block {
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 
-.page-header__text {
-  display: none;
-  margin: 0;
-  font-size: 15px;
-  font-weight: 400;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    bottom: 22px;
-    right: 50px;
-    display: block;
-  }
-}

@@ -1,41 +1,100 @@
 .hero-block {
-  position: relative;
-  overflow: hidden;
-  padding-top: 280px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  min-height: 506px;
   background-color: @white-6;
 
   @media (min-width: @tablet-width) {
-    padding-top: 560px;
-  }
-}
+    position: relative;
+    min-height: 746px;
 
-.hero-block__title {
-  position: absolute;
-  top: 71px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-  z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-size: 100% auto;
+      z-index: 1;
 
-  @media (min-width: @tablet-width) {
-    top: 90px;
-  }
-}
-
-.hero-block__img {
-  position: absolute;
-  top: -20px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    top: -65px;
-    width: 768px;
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/zigzag-fill-desktop.svg");
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 1150px;
+    grid-template-columns: 1fr 1150px 1fr;
+    min-height: 763px;
+  }
+
+  .hero-block__title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+    padding: 89px 30px 0;
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      padding: 156px 50px 0;
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
+
+  .hero-block__img-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .hero-block__img {
+      vertical-align: bottom;
+
+      @media (min-width: @tablet-width) {
+        width: 768px;
+        height: 758px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 1150px;
+      }
+    }
+  }
+
+  .hero-block__product-type {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    align-self: end;
+    justify-self: stretch;
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: -2;
+    }
   }
 }
