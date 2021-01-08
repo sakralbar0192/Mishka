@@ -24,8 +24,7 @@
 }
 
 .main-suggestion__title {
-  margin: 0;
-  margin-bottom: 17px;
+  margin: 0 0 15px;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
@@ -49,8 +48,7 @@
 }
 
 .main-suggestion__name {
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 0 0 6px;
   font-size: 25px;
   line-height: 30px;
 
@@ -73,8 +71,7 @@
 }
 
 .main-suggestion__text {
-  margin: 0;
-  margin-bottom: 28px;
+  margin: 0 0 30px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -120,10 +117,9 @@
     border-bottom: 1px solid @white-3;
   }
 
-  dd {
-    width: 200px;
-    margin-top: 3px;
-    padding-bottom: 12px;
+  .main-suggestion__value {
+    margin: 0;
+    padding: 0 0 11px 30px;
     border-bottom: 1px solid @white-3;
   }
 }
@@ -151,12 +147,19 @@
 }
 
 .main-suggestion__img {
-  margin-bottom: 27px;
+  @media (min-width: @tablet-width) {
+    width: 335px;
+    height: 405px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 635px;
+  }
 }
 
 .main-suggestion__price {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 23px;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
