@@ -8,50 +8,58 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <a href="index.html" class="page-header__logo-link">
-      <picture>
-        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-        <img class="page-header__logo" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
-      </picture>
-    </a>
-    <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="main-nav__toggle-signature main-nav__toggle-signature--open visually-hidden main-nav__toggle-signature--current-signature">Открыть меню</span>
-        <span class="main-nav__toggle-signature main-nav__toggle-signature--close visually-hidden">Закрыть меню</span>
+    <section class="page-header__top-menu top-menu">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
+      <a href="index.html" class="top-menu__logo">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+          <img class="top-menu__logo-img" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
+        </picture>
+      </a>
+      <button class="top-menu__nav-toggle" type="button">
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--open visually-hidden top-menu__nav-toggle-signature--current-signature">Открыть меню</span>
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--close visually-hidden">Закрыть меню</span>
       </button>
-      <ul class="main-nav__list main-nav__list--site-list">
-        <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-        <li class="main-nav__item main-nav__item--site-list"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
-      </ul>
-      <ul class="main-nav__list main-nav__list--user-list">
-        <li class="main-nav__item main-nav__item--user-list main-nav__item--search">
-          <a class="main-nav__link" href="#">
-            <svg class="main-nav__svg" width="18" height="18">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-            <span class="main-nav__search-text">Поиск по сайту</span>
-          </a>
-        </li>
-        <li class="main-nav__item main-nav__item--user-list main-nav__item--cart">
-          <a class="main-nav__link" href="#">
-            <svg class="main-nav__svg" width="21" height="18">
-              <use xlink:href="img/sprite.svg#cart"></use>
-            </svg>
-            Корзина: пока пуста
-          </a>
-        </li>
-      </ul>
-      <ul class="main-nav__list main-nav__list--additional-list">
-        <li class="main-nav__item main-nav__item--additional-list"><a class="main-nav__link" href="#">Новые поступления</a></li>
-        <li class="main-nav__item main-nav__item--additional-list"><a class="main-nav__link" href="#">Распродажа</a></li>
-      </ul>
-    </nav>
-    <p class="page-header__text">Бесплатная доставка по России</p>
+      <nav class="top-menu__nav top-menu__nav--site">
+        <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--site">
+          <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="catalog.html">Каталог товаров</a></li>
+          <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="form.html">Вязание на заказ</a></li>
+        </ul>
+      </nav>
+      <nav class="top-menu__nav top-menu__nav--user">
+        <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--user">
+          <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--search">
+            <a class="top-menu__nav-link top-menu__nav-link--user" href="#">
+              <svg class="top-menu__nav-item-svg" width="21" height="18">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+              <span class="top-menu__nav-item-text top-menu__nav-item-text--search">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--cart">
+            <a class="top-menu__nav-link top-menu__nav-link--user top-menu__nav-link--cart" href="#">
+              <svg class="top-menu__nav-item-svg" width="21" height="18">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="top-menu__nav top-menu__nav--add">
+        <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--add">
+          <li class="top-menu__nav-item top-menu__nav-item--add"><a class="top-menu__nav-link" href="#">Новые поступления</a></li>
+          <li class="top-menu__nav-item top-menu__nav-item--add"><a class="top-menu__nav-link" href="#">Распродажа</a></li>
+        </ul>
+      </nav>
+      <p class="top-menu__text">Бесплатная доставка по России</p>
+      <div class="top-menu__down-row-background"></div>
+    </section>
+    <h1 class="page-header__title-block page-header__title-block--catalog">Каталог товаров</h1>
   </header>
   <main class="page-main page-main--catalog">
     <section class="products">
-      <h1 class="page-main__title page-main__title--catalog">Каталог товаров</h1>
       <ul class="products__list">
         <li class="product-card products-list__item">
           <a href="#" class="product-card__img-link">
@@ -156,6 +164,7 @@
     </section>
   </main>
   <footer class="page-footer">
+    <div class="page-footer__wrapper">
       <a href="#" class="page-footer__logo">
         <svg class="page-footer__svg" width="100" height="35">
           <use xlink:href="img/sprite.svg#footer-logo"></use>
@@ -187,12 +196,13 @@
           </a>
         </li>
       </ul>
-    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
       <svg class="page-footer__svg" width="27" height="34">
         <use xlink:href="img/sprite.svg#html-academy"></use>
       </svg>
-    </a>
+      </a>
+    </div>
   </footer>
   <section class="modal modal">
   <div class="modal__wrapper">
