@@ -8,7 +8,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 103px;
+    display: grid;
+    grid-template-columns: 1fr 1050px 1fr;
+    margin-bottom: 106px;
   }
 
   .production-process__wrapper {
@@ -25,6 +27,8 @@
     }
 
     @media (min-width: @desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: 3;
       grid-template-columns: auto 1fr;
     }
 
