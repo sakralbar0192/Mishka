@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -32,7 +32,7 @@
           <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--search">
             <a class="top-menu__nav-link top-menu__nav-link--user" href="#">
               <svg class="top-menu__nav-item-svg" width="21" height="18">
-                <use xlink:href="img/sprite.svg#search"></use>
+                <use xlink:href="img/sprite.svg#ico-search"></use>
               </svg>
               <span class="top-menu__nav-item-text top-menu__nav-item-text--search">Поиск по сайту</span>
             </a>
@@ -40,7 +40,7 @@
           <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--cart">
             <a class="top-menu__nav-link top-menu__nav-link--user top-menu__nav-link--cart" href="#">
               <svg class="top-menu__nav-item-svg" width="21" height="18">
-                <use xlink:href="img/sprite.svg#cart"></use>
+                <use xlink:href="img/sprite.svg#ico-cart"></use>
               </svg>
               Корзина: пока пуста
             </a>
@@ -149,15 +149,17 @@
           <dd class="contacts__value">г. Санкт-Петербург<br/>ул. Большая Конюшенная<br/>д. 19/8, офис 101</dd>
         </dl>
         <div class="contacts__map">
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="../img/map-desktop.webp 1x, ../img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="../img/map-tablet.webp 1x, ../img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="../img/map-mobile.webp 1x, ../img/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1150px)" srcset="../img/map-desktop.jpg 1x, ../img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="../img/map-tablet.jpg 1x, ../img/map-tablet@2x.jpg 2x">
-            <img class="contacts__img" src="../img/map-mobile.jpg" alt="Карта" width="320" height="454"/>
-          </picture>
-          <!--<iframe class="contacts__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQ~RGgKwA"></iframe>-->
+          <div class="contacts__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="../img/map-desktop.webp 1x, ../img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="../img/map-tablet.webp 1x, ../img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="../img/map-mobile.webp 1x, ../img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="../img/map-desktop.jpg 1x, ../img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/map-tablet.jpg 1x, ../img/map-tablet@2x.jpg 2x">
+              <img class="contacts__img" src="../img/map-mobile.jpg" alt="Карта" width="320" height="454"/>
+            </picture>
+          </div>
+          <iframe class="contacts__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQ~RGgKwA"></iframe>
         </div>
         <a href="feedback.html" class="button contacts__button">Напишите нам</a>
       </div>
@@ -167,7 +169,7 @@
     <div class="page-footer__wrapper">
       <a href="#" class="page-footer__logo">
         <svg class="page-footer__svg" width="100" height="35">
-          <use xlink:href="img/sprite.svg#footer-logo"></use>
+          <use xlink:href="img/sprite.svg#ico-footer-logo"></use>
         </svg>
       </a>
       <ul class="page-footer__social-list">
@@ -175,7 +177,7 @@
           <a class="page-footer__social-link page-footer__social-link--instagram" href="#">
             <span class="visually-hidden">Instagram</span>
             <svg class="page-footer__svg" width="22" height="22">
-              <use xlink:href="img/sprite.svg#instagramm"></use>
+              <use xlink:href="img/sprite.svg#ico-instagram"></use>
             </svg>
           </a>
         </li>
@@ -183,7 +185,7 @@
           <a class="page-footer__social-link page-footer__social-link--facebook" href="#">
             <span class="visually-hidden">Facebook</span>
             <svg class="page-footer__svg" width="15" height="28">
-              <use xlink:href="img/sprite.svg#facebook"></use>
+              <use xlink:href="img/sprite.svg#ico-facebook"></use>
             </svg>
           </a>
         </li>
@@ -191,7 +193,7 @@
           <a class="page-footer__social-link page-footer__social-link--twitter" href="#">
             <span class="visually-hidden">Twitter</span>
             <svg class="page-footer__svg" width="23" height="20">
-              <use xlink:href="img/sprite.svg#twitter"></use>
+              <use xlink:href="img/sprite.svg#ico-twitter"></use>
             </svg>
           </a>
         </li>
@@ -199,7 +201,7 @@
       <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
       Разработано
       <svg class="page-footer__svg" width="27" height="34">
-        <use xlink:href="img/sprite.svg#html-academy"></use>
+        <use xlink:href="img/sprite.svg#ico-html-academy"></use>
       </svg>
       </a>
     </div>
