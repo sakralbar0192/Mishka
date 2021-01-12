@@ -17,17 +17,17 @@
           <img class="top-menu__logo-img" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
         </picture>
       </a>
-      <button class="top-menu__nav-toggle" type="button">
-          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--open visually-hidden top-menu__nav-toggle-signature--current-signature">Открыть меню</span>
-          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--close visually-hidden">Закрыть меню</span>
+      <button class="top-menu__nav-toggle top-menu__nav-toggle--close" type="button">
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--open visually-hidden">Открыть меню</span>
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--close visually-hidden top-menu__nav-toggle-signature--current-signature">Закрыть меню</span>
       </button>
-      <nav class="top-menu__nav top-menu__nav--site">
+      <nav class="top-menu__nav top-menu__nav--site top-menu__nav--show">
         <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--site">
           <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="catalog.html">Каталог товаров</a></li>
           <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="form.html">Вязание на заказ</a></li>
         </ul>
       </nav>
-      <nav class="top-menu__nav top-menu__nav--user">
+      <nav class="top-menu__nav top-menu__nav--user top-menu__nav--show">
         <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--user">
           <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--search">
             <a class="top-menu__nav-link top-menu__nav-link--user" href="#">
@@ -55,7 +55,7 @@
       </nav>
       <p class="top-menu__text">Бесплатная доставка по России</p>
       <div class="top-menu__down-row-background"></div>
-    </section>
+      </section>
     <h1 class="page-header__title-block page-header__title-block--form">Вязание на заказ</h1>
   </header>
   <main class="page-main">
@@ -173,5 +173,6 @@
       </a>
     </div>
   </footer>
+  <script src="js/menu.js"></script>
 </body>
 </html>

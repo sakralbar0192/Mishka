@@ -47,70 +47,70 @@
   &:active {
     box-shadow: 0 3px 5px rgba(@black, 0.1);
   }
+}
 
-  .product-card__top-info {
-    padding-bottom: 17px;
+.product-card__top-info {
+  padding-bottom: 17px;
 
-    @media (min-width: @desktop-width) {
-      padding-bottom: 13px;
-    }
+  @media (min-width: @desktop-width) {
+    padding-bottom: 13px;
+  }
+}
 
-    .product-card__title {
-      display: block;
-      margin-bottom: 5px;
-      color: @black;
+.product-card__title {
+  display: block;
+  margin-bottom: 5px;
+  color: @black;
 
-      @media (min-width: @tablet-width) {
-        font-size: 20px;
-      }
-    }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
 
-    .product-card__description {
-      margin: 0;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 30px;
+.product-card__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
 
-      @media (min-width: @tablet-width) {
-        font-size: 15px;
-      }
-    }
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
+}
+
+.product-card__bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 23px;
+  border-top: 1px solid @white-3;
+}
+
+.product-card__price {
+  margin: 0;
+  font-size: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.product-card__button {
+  padding: 0;
+  border: 0;
+  background-color: @white;
+  outline: none;
+}
+
+.product-card__svg {
+  opacity: 0.2;
+
+  &:hover {
+    fill: @tiffany-2;
+    opacity: 1;
   }
 
-  .product-card__bottom-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 23px;
-    border-top: 1px solid @white-3;
-
-    .product-card__price {
-      margin: 0;
-      font-size: 15px;
-
-      @media (min-width: @tablet-width) {
-        font-size: 17px;
-      }
-    }
-
-    .product-card__button {
-      padding: 0;
-      border: 0;
-      background-color: @white;
-      outline: none;
-
-      .product-card__svg {
-        opacity: 0.2;
-
-        &:hover {
-          fill: @tiffany-2;
-          opacity: 1;
-        }
-
-        &:active {
-          opacity: 0.3;
-        }
-      }
-    }
+  &:active {
+    opacity: 0.3;
   }
 }

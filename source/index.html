@@ -17,17 +17,17 @@
           <img class="top-menu__logo-img" src="img/mishka-logo-mobile.svg" alt="логотип интернет-магазина Мишка" height="35" width="86">
         </picture>
       </div>
-      <button class="top-menu__nav-toggle" type="button">
-          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--open visually-hidden top-menu__nav-toggle-signature--current-signature">Открыть меню</span>
-          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--close visually-hidden">Закрыть меню</span>
+      <button class="top-menu__nav-toggle top-menu__nav-toggle--close" type="button">
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--open visually-hidden">Открыть меню</span>
+          <span class="top-menu__nav-toggle-signature top-menu__nav-toggle-signature--close visually-hidden top-menu__nav-toggle-signature--current-signature">Закрыть меню</span>
       </button>
-      <nav class="top-menu__nav top-menu__nav--site">
+      <nav class="top-menu__nav top-menu__nav--site top-menu__nav--show">
         <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--site">
           <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="catalog.html">Каталог товаров</a></li>
           <li class="top-menu__nav-item top-menu__nav-item--site"><a class="top-menu__nav-link top-menu__nav-link--site" href="form.html">Вязание на заказ</a></li>
         </ul>
       </nav>
-      <nav class="top-menu__nav top-menu__nav--user">
+      <nav class="top-menu__nav top-menu__nav--user top-menu__nav--show">
         <ul class="top-menu__nav-wrapper top-menu__nav-wrapper--user">
           <li class="top-menu__nav-item top-menu__nav-item--user top-menu__nav-item--search">
             <a class="top-menu__nav-link top-menu__nav-link--user" href="#">
@@ -207,16 +207,21 @@
     </div>
   </footer>
 <section class="modal">
-  <div class="modal__wrapper">
+  <form class="modal__wrapper" action="https://echo.htmlacademy.ru" method="get">
     <h2 class="modal-title">Добавить в корзину</h2>
     <p class="modal__text">Выберите размер:</p>
     <div class="modal__size-buttons">
-      <button class="modal__size-button modal__size-button--current">s</button>
-      <button class="modal__size-button">m</button>
-      <button class="modal__size-button">l</button>
+      <input class="modal__size-input visually-hidden" type="radio" name="size" value="s" id="s" checked/>
+      <label for="s" class="modal__label">s</label>
+      <input class="modal__size-input visually-hidden" type="radio" name="size" value="m" id="m"/>
+      <label for="m" class="modal__label">m</label>
+      <input class="modal__size-input visually-hidden" type="radio" name="size" value="l" id="l"/>
+      <label for="l" class="modal__label">l</label>
     </div>
-    <button class="modal__button">Добавить</button>
-  </div>
+    <button class="modal__button" type="submit">Добавить</button>
+  </form>
 </section>
+<script src="js/menu.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>

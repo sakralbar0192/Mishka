@@ -77,32 +77,32 @@
     grid-row-gap: 30px;
     margin: 0;
   }
+}
 
-  .contacts__value {
-    margin-left: 33px;
+.contacts__value {
+  margin-left: 33px;
 
-    @media (min-width: @tablet-width) {
-      margin-left: 25px;
-    }
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-left: 22px;
-    }
+  @media (min-width: @desktop-width) {
+    margin-left: 22px;
+  }
+}
 
-    .contacts__link {
-      text-decoration: underline;
-      text-underline-position: under;
-      color: @black-2;
-      text-decoration-color: @tiffany;
+.contacts__link {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: @black-2;
+  text-decoration-color: @tiffany;
 
-      &:hover {
-        color: @tiffany-5;
-      }
+  &:hover {
+    color: @tiffany-5;
+  }
 
-      &:active {
-        text-decoration: none;/*почему то это свойство не работает, не могу понять в чем дело*/
-      }
-    }
+  &:active {
+    text-decoration: none;
   }
 }
 
@@ -128,65 +128,60 @@
     height: 458px;
     margin: 0;
   }
+}
 
-  .contacts__img-wrapper {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
+.contacts__img-wrapper {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 32%;
-      left: 43%;
-      width: 67px;
-      height: 100px;
-      background-image: url("../img/map-pin.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: 1;
-
-      @media (min-width: @tablet-width) {
-        top: 30%;
-        left: 48%;
-      }
-
-      @media (min-width: @desktop-width) {
-        top: 32%;
-        left: 45%;
-      }
-    }
-
-    .contacts__img {
-      width: 100%;
-      height: 455px;
-
-      @media (min-width: @tablet-width) {
-        height: 457px;
-      }
-    }
-  }
-
-  .contacts__iframe-map {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    width: 100%;
-    height: 455px;
-    border: 0;
-    z-index: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 32%;
+    left: 43%;
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
 
     @media (min-width: @tablet-width) {
-      height: 457px;
+      top: 30%;
+      left: 48%;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 32%;
+      left: 45%;
     }
   }
 }
 
-.contacts__iframe-map {
+.contacts__img {
   width: 100%;
-  height: 100%;
+  height: 455px;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
+}
+
+.contacts__iframe-map {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  width: 100%;
+  height: 455px;
+  border: 0;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
 }
 
 .contacts__button {
