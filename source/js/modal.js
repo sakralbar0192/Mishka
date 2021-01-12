@@ -8,15 +8,15 @@ const buttonModalSizeCurrent = document.querySelector(".modal__size-button--curr
 //Modal
 
 window.addEventListener("keydown", function(evt){
-	if(evt.keyCode === 27) {
-		if(modal.classList.contains("modal--show")){
-			evt.preventDefault();
-			modal.classList.remove("modal--show");
-		}
-	}
+if(evt.keyCode === 27) {
+if(modal.classList.contains("modal--show")){
+evt.preventDefault();
+modal.classList.remove("modal--show");
+}
+}
 })
 
 buttonModal.addEventListener("click", function(evt){
-	evt.preventDefault();
-	modal.classList.add("modal--show");
+evt.preventDefault();
+modal.classList.add("modal--show");
 })
