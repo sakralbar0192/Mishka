@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
+  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="page-body">
@@ -65,7 +67,7 @@
           <source type="image/webp" srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/hero-desktop.jpg 1x, img/hero-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x">
-          <img class="hero-block__img" src="img/hero-mobile.jpg" alt="hero-изображение" width="320" height="505"/>
+          <img class="hero-block__img" src="img/hero-mobile.jpg" alt="hero-изображение" width="320" height="505" loading="lazy"/>
         </picture>
       </div>
       <section class="product-type hero-block__product-type">
@@ -96,21 +98,29 @@
           <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-          <img class="main-suggestion__img" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки"  width="260" height="315">
+          <img class="main-suggestion__img" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки"  width="260" height="315" loading="lazy"/>
         </picture>
       </div>
       <p class="main-suggestion__price">Цена: 990 руб.</p>
-      <a href="#" class="button main-suggestion__button">Заказать</a>
+      <a href="order.html" class="button main-suggestion__button">Заказать</a>
     </section>
     <section class="about-us">
       <h2 class="about-us__title">Коротко о нас:</h2>
       <ul class="about-us__list">
-        <li class="about-us__item about-us__item--flower about-us__item--left">Экологически<br/>чистые материалы</li>
-        <li class="about-us__item about-us__item--money about-us__item--left">Скандинавский стиль<br/>по российской цене</li>
-        <li class="about-us__item about-us__item--heart about-us__item--left">Увеличивает лайки<br/>на фотографиях</li>
-        <li class="about-us__item about-us__item--ball about-us__item--right">Связано вручную<br/>с любовью и умилением</li>
-        <li class="about-us__item about-us__item--rocket about-us__item--right">Поддержка отечественного<br/>производителя</li>
-        <li class="about-us__item about-us__item--gift about-us__item--right">Поставляется<br/>в подарочной упаковке</li>
+        <li class="about-us__item">
+          <ul class="about-us__internal-list">
+            <li class="about-us__internal-item about-us__internal-item--flower">Экологически<br/>чистые материалы</li>
+            <li class="about-us__internal-item about-us__internal-item--money">Скандинавский стиль<br/>по российской цене</li>
+            <li class="about-us__internal-item about-us__internal-item--heart">Увеличивает лайки<br/>на фотографиях</li>
+          </ul>
+        </li>
+        <li class="about-us__item">
+          <ul class="about-us__internal-list">
+            <li class="about-us__internal-item about-us__internal-item--ball">Связано вручную<br/>с любовью и умилением</li>
+            <li class="about-us__internal-item about-us__internal-item--rocket">Поддержка отечественного<br/>производителя</li>
+            <li class="about-us__internal-item about-us__internal-item--gift">Поставляется<br/>в подарочной упаковке</li>
+          </ul>
+        </li>
       </ul>
     </section>
     <section class="reviews">
@@ -156,7 +166,7 @@
               <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-              <img class="contacts__img" src="img/map-mobile.jpg" alt="Карта" width="320" height="454"/>
+              <img class="contacts__img" src="img/map-mobile.jpg" alt="Карта" width="320" height="454" loading="lazy"/>
             </picture>
           </div>
           <iframe class="contacts__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQ~RGgKwA"></iframe>
